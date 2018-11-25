@@ -1,4 +1,11 @@
-.colors {
+.colors-wrapper {
   display: flex;
   height: calc(100vh - 64px);
+  overflow-y: hidden;
+}
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
 }

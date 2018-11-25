@@ -5,6 +5,7 @@
   flex: 1;
   color: #000;
   padding: 20px;
+  min-width: calc(100vw / 10);
 
   &--dark {
     color: #fff;

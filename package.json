@@ -5,6 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "color": "^3.1.0",
+    "color-gradient": "0.0.3",
     "node-sass": "^4.10.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
