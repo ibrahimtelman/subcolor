@@ -1,0 +1,17 @@
+.color {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex: 1;
+  color: #000;
+  padding: 20px;
+
+  &--dark {
+    color: #fff;
+  }
+
+  &__code {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
