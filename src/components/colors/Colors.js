@@ -9,8 +9,8 @@ class Colors extends React.Component {
     return (
       <div className={"colors-wrapper"}>
         <div className={"colors"}>
-          {colors.map(color => (
-            <Color color_code={color} />
+          {colors.map((color, i) => (
+            <Color key={i} color_code={color} />
           ))}
         </div>
       </div>

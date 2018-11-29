@@ -1,4 +1,5 @@
 .color {
+  $self: &;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -6,9 +7,31 @@
   color: #000;
   padding: 20px;
   min-width: calc(100vw / 10);
+  cursor: pointer;
+  position: relative;
 
   &--dark {
     color: #fff;
+  }
+
+  &__copy {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    padding: 7px 2rem;
+    height: auto;
+    border: 2px solid hsla(0, 0%, 100%, 0.2);
+    border-radius: 4px;
+    line-height: 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.2s, opacity 0.3s, -webkit-transform 0.2s;
+
+    #{ $self }:hover & {
+      opacity: 1;
+    }
   }
 
   &__code {
