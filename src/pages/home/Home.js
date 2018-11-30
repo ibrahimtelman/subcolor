@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import ColorGradient from "color-gradient";
-import Header from "./components/header";
-import Colors from "./components/colors";
-import "./App.css";
+import Header from "../../components/header";
+import Colors from "../../components/colors";
+import "./style.scss";
 
 const colors = ColorGradient("#000", "#fff", 6);
 
-class App extends Component {
+class Home extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="Home">
         <Header />
 
         <Colors colors={colors} />
@@ -18,4 +18,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
