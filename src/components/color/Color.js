@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import ColorX from "color";
 import cx from "classnames";
+
+import Event from "../../config/EventBus";
+
 import "./style.scss";
 
 class Color extends React.Component {
@@ -23,6 +26,8 @@ class Color extends React.Component {
       document.getSelection().removeAllRanges();
       document.getSelection().addRange(selected);
     }
+
+    Event.emit("copied", str);
   };
 
   render() {

@@ -1,0 +1,27 @@
+.copied {
+  position: absolute;
+  opacity: 0;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #4b6d89;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    display: flex;
+  }
+
+  &__text-wrapper {
+    padding: 5rem;
+    background: #c4c0c04d;
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+  }
+}
