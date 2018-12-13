@@ -1,0 +1,29 @@
+.color-picker {
+  margin: 0 10px;
+
+  &__input {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background-color: #ff3b49;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.5s;
+  }
+
+  &__input:hover {
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .picker-wrapper {
+    position: absolute;
+  }
+
+  .picker-handler {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

@@ -12,15 +12,24 @@ import Copied from "../../components/copied";
 //Style
 import "./style.scss";
 
-const colors = ColorGradient("#000", "#fff", 6);
+const defaultColors = {
+  start: "#EE578D",
+  end: "#1D7AEE"
+};
 
 class Home extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      inputs: {
+        start: defaultColors.start,
+        end: defaultColors.end,
+        midpoint: 6
+      },
       isCopied: false,
-      color: "#124"
+      color: "#124",
+      colors: ColorGradient(defaultColors.start, defaultColors.end, 6)
     };
   }
 
@@ -42,13 +51,33 @@ class Home extends Component {
         }
       );
     });
+
+    Event.on("colorChanged", data => {
+      let input = self.state.inputs;
+      input[data.key] = data.color.hex;
+
+      self.setState({
+        inputs: input,
+        colors: ColorGradient(input.start, input.end, 6)
+      });
+    });
+
+    Event.on("midpointChanged", data => {
+      let input = self.state.inputs;
+      input.midpoint = data.number;
+
+      self.setState({
+        inputs: input,
+        colors: ColorGradient(input.start, input.end, input.midpoint)
+      });
+    });
   }
 
   render() {
-    const { color, isCopied } = this.state;
+    const { color, isCopied, inputs, colors } = this.state;
     return (
       <div className="Home">
-        <Header />
+        <Header inputs={inputs} />
 
         <Colors colors={colors} />
 

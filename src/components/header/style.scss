@@ -1,3 +1,24 @@
 .header {
   height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .midpoint-field {
+    padding: 0;
+    margin: 0 10px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(51, 51, 51, 0.45098039215686275);
+    text-align: right;
+    border-radius: 4px;
+  }
 }
