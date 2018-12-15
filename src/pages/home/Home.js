@@ -12,9 +12,10 @@ import Copied from "../../components/copied";
 //Style
 import "./style.scss";
 
-const defaultColors = {
+const defaultInputs = {
   start: "#EE578D",
-  end: "#1D7AEE"
+  end: "#1D7AEE",
+  midpoint: 6
 };
 
 class Home extends Component {
@@ -22,14 +23,14 @@ class Home extends Component {
     super(props);
 
     this.state = {
-      inputs: {
-        start: defaultColors.start,
-        end: defaultColors.end,
-        midpoint: 6
-      },
+      inputs: defaultInputs,
       isCopied: false,
       color: "#124",
-      colors: ColorGradient(defaultColors.start, defaultColors.end, 6)
+      colors: ColorGradient(
+        defaultInputs.start,
+        defaultInputs.end,
+        defaultInputs.midpoint
+      )
     };
   }
 
@@ -58,7 +59,7 @@ class Home extends Component {
 
       self.setState({
         inputs: input,
-        colors: ColorGradient(input.start, input.end, 6)
+        colors: ColorGradient(input.start, input.end, input.midpoint)
       });
     });
 
