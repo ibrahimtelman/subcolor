@@ -39,3 +39,15 @@
     line-height: 1.5rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .color {
+    $self: &;
+    min-width: auto;
+    min-height: calc(100vh / 8);
+
+    #{ $self }:hover &__copy {
+      opacity: 0;
+    }
+  }
+}

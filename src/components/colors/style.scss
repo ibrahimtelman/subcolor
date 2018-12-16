@@ -9,3 +9,18 @@
   flex-direction: row;
   flex: 1;
 }
+
+@media screen and (max-width: 768px) {
+  .colors-wrapper {
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 64px;
+  }
+
+  .colors {
+    flex-direction: column;
+  }
+}

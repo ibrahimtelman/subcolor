@@ -22,17 +22,17 @@ class Header extends React.Component {
     return (
       <div className={"header"}>
         <div className={"container"}>
-          Starts with{" "}
+          From
           <ColorPicker
             color={inputs.start}
             onChange={color => this.onColorChange(color, "start")}
-          />{" "}
-          finish with{" "}
+          />
+          to
           <ColorPicker
             color={inputs.end}
             onChange={color => this.onColorChange(color, "end")}
-          />{" "}
-          and generate{" "}
+          />
+          generate
           <input
             className={"midpoint-field"}
             type="number"

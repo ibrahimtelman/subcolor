@@ -1,11 +1,13 @@
 .copied {
-  position: absolute;
+  position: fixed;
   opacity: 0;
   display: none;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
   background: #4b6d89;
   align-items: center;
   justify-content: center;
