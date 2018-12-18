@@ -1,4 +1,4 @@
-This project is based on [color-gradient](https://www.npmjs.com/package/color-gradient) npm package
+[Subcolor](https://subcolor.github.io) is based on [color-gradient](https://www.npmjs.com/package/color-gradient) npm package
 
 ## About
 
