@@ -2,6 +2,8 @@ This project is based on [color-gradient](https://www.npmjs.com/package/color-gr
 
 ## About
 
+![Subcolor](https://github.com/ibrahimtelman/subcolor/blob/master/public/preview.png?raw=true)
+
 Subcolor is a tool to generate colors between two colors
 
 [Subcolor](https://subcolor.github.io)
