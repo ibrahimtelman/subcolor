@@ -13,8 +13,8 @@ import Copied from "../../components/copied";
 import "./style.scss";
 
 const defaultInputs = {
-  start: "#EE578D",
-  end: "#1D7AEE",
+  start: "#000000",
+  end: "#FFFFFF",
   midpoint: 6
 };
 
