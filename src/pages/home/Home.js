@@ -12,9 +12,31 @@ import Copied from "../../components/copied";
 //Style
 import "./style.scss";
 
+const colors = [
+  {
+    start: "#EE578D",
+    end: "#1D7AEE"
+  },
+  {
+    start: "#16a085",
+    end: "#f39c12"
+  },
+  {
+    start: "#2980b9",
+    end: "#d35400"
+  },
+  {
+    start: "#2980b9",
+    end: "#c0392b"
+  },
+  {
+    start: "#2c3e50",
+    end: "#ecf0f1"
+  }
+];
+
 const defaultInputs = {
-  start: "#EE578D",
-  end: "#1D7AEE",
+  ...colors[Math.floor(Math.random() * colors.length)],
   midpoint: 6
 };
 
