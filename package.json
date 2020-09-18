@@ -7,7 +7,7 @@
     "classnames": "^2.2.6",
     "color": "^3.1.0",
     "color-gradient": "^0.0.4",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.13.1",
     "react": "^16.6.3",
     "react-color": "^2.14.1",
     "react-dom": "^16.6.3",
