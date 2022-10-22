@@ -8,7 +8,7 @@ import Event from "../../config/EventBus";
 import "./style.scss";
 
 class Color extends React.Component {
-  copyToClipboard = str => {
+  copyToClipboard = (str) => {
     const el = document.createElement("textarea");
     el.value = str;
     el.setAttribute("readonly", "");
@@ -48,11 +48,11 @@ class Color extends React.Component {
 }
 
 Color.proptypes = {
-  color_code: PropTypes.string
+  color_code: PropTypes.string,
 };
 
 Color.defaultProps = {
-  color_code: "#124"
+  color_code: "#124124",
 };
 
 export default Color;
