@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import ColorPicker from "../color-picker";
 
 //EventBus
@@ -8,47 +7,40 @@ import Event from "../../config/EventBus";
 //style
 import "./style.scss";
 
-class Header extends React.Component {
-  onColorChange(color, key) {
+const Header = ({ inputs }) => {
+  const onColorChange = (color, key) => {
     Event.emit("colorChanged", { color, key });
-  }
+  };
 
-  midpointChange(number) {
+  const midpointChange = (number) => {
     Event.emit("midpointChanged", { number });
-  }
+  };
 
-  render() {
-    const { inputs } = this.props;
-    return (
-      <div className={"header"}>
-        <div className={"container"}>
-          From
-          <ColorPicker
-            color={inputs.start}
-            onChange={color => this.onColorChange(color, "start")}
-          />
-          to
-          <ColorPicker
-            color={inputs.end}
-            onChange={color => this.onColorChange(color, "end")}
-          />
-          generate
-          <input
-            className={"midpoint-field"}
-            type="number"
-            min="1"
-            onChange={number => this.midpointChange(number.target.value)}
-            value={inputs.midpoint}
-          />{" "}
-          colors
-        </div>
+  return (
+    <div className={"header"}>
+      <div className={"container"}>
+        From
+        <ColorPicker
+          color={inputs.start}
+          onChange={(color) => onColorChange(color, "start")}
+        />
+        to
+        <ColorPicker
+          color={inputs.end}
+          onChange={(color) => onColorChange(color, "end")}
+        />
+        generate
+        <input
+          className={"midpoint-field"}
+          type="number"
+          min="1"
+          onChange={(number) => midpointChange(number.target.value)}
+          value={inputs.midpoint}
+        />{" "}
+        colors
       </div>
-    );
-  }
-}
-
-Header.proptypes = {
-  inputs: PropTypes.object
+    </div>
+  );
 };
 
 export default Header;

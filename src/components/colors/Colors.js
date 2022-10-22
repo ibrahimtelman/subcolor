@@ -1,25 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Color from "../color";
 import "./style.scss";
 
-class Colors extends React.Component {
-  render() {
-    const { colors } = this.props;
-    return (
-      <div className={"colors-wrapper"}>
-        <div className={"colors"}>
-          {colors.map((color, i) => (
-            <Color key={i} color_code={color} />
-          ))}
-        </div>
+const Colors = ({ colors }) => {
+  return (
+    <div className={"colors-wrapper"}>
+      <div className={"colors"}>
+        {colors.map((color, i) => (
+          <Color key={i} color_code={color} />
+        ))}
       </div>
-    );
-  }
-}
-
-Colors.prototypes = {
-  colors: PropTypes.array
+    </div>
+  );
 };
 
 export default Colors;
